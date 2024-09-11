@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../Assets/Style/adminlogin.css"
+import "../../Assets/Style/AdminLogin.css"
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 

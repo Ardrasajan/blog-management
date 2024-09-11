@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Homepage from './Components/Homepage';
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         <Route/>
       </Routes>
     </BrowserRouter>
+  
   );
 }
 

@@ -6,6 +6,8 @@ import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle.min.js"
 import AdminLogin from './Components/Admin/AdminLogin.js';
+import UserLogin from './Components/User/UserLogin.js';
+import AdminDashboard from './Components/Admin/AdminDashboard.js';
 
 
 function App() {
@@ -13,13 +15,15 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        <Route path="/Homepage" element={<Homepage/>}/>
+        {/* <Route path="/Homepage" element={<Homepage/>}/> */}
 
-        {/* <Route path='/adminlogin' Component={<AdminLogin/>}/> */}
-        
+        {/* <Route path="/adminlogin" Component={<AdminLogin/>}/> */}
+        {/* <Route path="/admindashboard" Component={<AdminDashboard/>}/> */}
 
       </Routes>
-      <AdminLogin/>
+       {/* <AdminLogin/>  */}
+      {/* <UserLogin/> */}
+      <AdminDashboard/>
     </BrowserRouter>
   
   );

@@ -1,0 +1,45 @@
+.Admin_sidebar_component{
+    height: 100vh;
+    width: 300px;
+    background-color:black;
+}
+.Admin_sidebar_component h5{
+text-align: left;
+margin-left: 70px;
+color: chocolate;
+
+}
+.Admin_sidebar_list{
+    width: 200px;
+    height: 600px;
+    margin: auto;
+    margin-top: 50px;
+    background-color:black;
+    
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size:20px;
+    
+
+}
+.Admin_sidebar_list .item{
+    color: chocolate;
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+    border-radius: 8px;
+    padding:5px;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+   
+    
+}
+.Admin_sidebar_list .item:hover{
+    background-color: chocolate;
+    color: black;
+}
+.Admin_sidebar_list .icons{
+    margin-top: 8px;
+}

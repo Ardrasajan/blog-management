@@ -1,9 +1,22 @@
 .main {
-    background-image: url("https://img.freepik.com/free-photo/silhouette-tree-against-moody-sky-generated-by-ai_188544-22440.jpg");
+    background-image: url("https://img.freepik.com/free-photo/anxiety-induced-by-dark-forest_23-2150981901.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 65vh;
     width: 100%;
 }
+.theway{color: orangered;}
 .text{color: orangered;}
-.btn{background-color: orangered;}
+.hpbtn{background-color: orangered;}
+.body{color: white;
+padding: 10%;}
+.card{background-size: cover;
+justify-content: space-between;}
+.cardimage img{height: 30vh;
+    
+;
+}
+.maincard .cardimage{display: flex;
+    justify-content: space-between;
+}
+.yoga{margin-right: 53%;}

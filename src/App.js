@@ -31,6 +31,7 @@ function App() {
          <Route path="/admincategory" element={<AdminDashboardContent data='category'/>}/>
          <Route path="/adminviewblogs" element={<AdminDashboardContent data='viewblogs'/>}/>
          <Route path="/adminusers" element={<AdminDashboardContent data='users'/>}/>
+        <Route path="/Homepage1" element={<Homepage/>}/>
       </Routes>
        {/* <AdminLogin/>  */}
       {/* <UserLogin/> */}

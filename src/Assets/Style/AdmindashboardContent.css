@@ -1,0 +1,17 @@
+.sidebar{
+    background-image: url('../Images/darkforest.jpg');
+    background-repeat:no-repeat ;
+    min-height: 100vh;
+    display: flex;
+    gap: 20px;
+}
+.Admin_dashboard_content{
+    color: chocolate;
+    background-color: rgba(0, 0, 0, 0.6);
+   
+    border-radius: 15px;
+    flex: 1;
+    border-radius: 20px;
+    padding: 20px;
+    
+}

@@ -1,0 +1,54 @@
+.Admin_viewblog_container{
+    height:100vh;
+    width:1160px;
+    margin: auto;
+    /* background-color: aqua; */
+    position: static;
+    
+
+}
+.Admin_second_container{
+    display: flex;
+    
+}
+.Viewblog_title{
+    margin-left: 20px;
+    margin-top: 20px;
+    border-bottom:2px solid chocolate;
+}
+.card_container{
+     height:600px ;
+    width: 900px; 
+    margin-top: 20px;
+    margin-left: 20px;
+    /* background-color: aliceblue; */
+     /* position: fixed;    */
+   
+    
+
+}
+.card_container .rows{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+    
+}
+.card_container .rows .col .cards {
+    border-color: chocolate;
+}
+.card_container .rows .col .cards .buttons{
+    /* background-color: chocolate; */
+}
+.card_container rows col cards buttons:hover{
+    cursor: pointer;
+}
+.cards img{
+    height: 150px;
+}
+.admin_view_search{
+
+    min-height: 100vh;
+    width: 300px;
+    margin-top: 38px;
+    background-color: aliceblue;
+}

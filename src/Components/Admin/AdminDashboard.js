@@ -4,22 +4,23 @@ import { BiHome } from "react-icons/bi";
 import { FaListUl } from "react-icons/fa6"
 import { FaBlogger,FaEdit,FaUsers  } from "react-icons/fa"
 import { MdDeleteSweep } from "react-icons/md"
+import { Link } from 'react-router-dom';
 
 function AdminDashboard() {
   return (
     <div className='Admin_sidebar_component'>
         <div className='Admin_sidebar_container'>
-            <h5>Blog<br></br> Management</h5>
+            <h2>BLOG ADMIN</h2>
 <div className='Admin_sidebar_list '>
-<a href="#" className="item">
+<Link to="/admindashboard" className="item">
   <BiHome className='icons'/>
     Dash Board
-  </a><br></br>
-  <a href="#" className="item"><FaListUl className='icons'/>Categories</a><br></br>
-  <a href="#" className="item"><FaBlogger className='icons'/>Create Blogs</a><br></br>
-  <a href="#" className="item"><FaEdit className='icons'/>Edit Blogs</a><br></br>
-  <a href="#" className="item"><MdDeleteSweep className='icons'/>Delete Blogs</a><br></br>
-  <a href="#" className="item"><FaUsers className='icons'/>Subscribers</a><br></br>
+  </Link><br></br>
+  <Link to="/admincategory" className="item"><FaListUl className='icons'/>Categories</Link><br></br>
+  <Link to="/admincreateblogs" className="item"><FaBlogger className='icons'/>Create Blogs</Link><br></br>
+  <Link to="/adminviewblogs" className="item"><FaEdit className='icons'/>View Blogs</Link><br></br>
+  
+  <Link to="/adminusers" className="item"><FaUsers className='icons'/>Users</Link><br></br>
   
 
 </div>

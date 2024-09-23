@@ -1,12 +1,15 @@
 .Admin_sidebar_component{
-    height: 100vh;
+    min-height: 100vh;
     width: 300px;
-    background-color:black;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
 }
-.Admin_sidebar_component h5{
+.Admin_sidebar_component h2{
+    margin-top: 50px;
 text-align: left;
-margin-left: 70px;
+margin-left: 60px;
 color: chocolate;
+transition: all 0.5s ease-in-out;
 
 }
 .Admin_sidebar_list{
@@ -14,7 +17,8 @@ color: chocolate;
     height: 600px;
     margin: auto;
     margin-top: 50px;
-    background-color:black;
+    
+
     
     text-align: left;
     display: flex;

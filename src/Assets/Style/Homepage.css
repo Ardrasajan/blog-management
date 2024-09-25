@@ -2,21 +2,55 @@
     background-image: url("https://img.freepik.com/free-photo/anxiety-induced-by-dark-forest_23-2150981901.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 65vh;
+    height: 85vh;
     width: 100%;
 }
-.theway{color: orangered;}
-.text{color: orangered;}
-.hpbtn{background-color: orangered;}
-.body{color: white;
-padding: 10%;}
-.card{background-size: cover;
-justify-content: space-between;}
-.cardimage img{height: 30vh;
-    
-;
+.header_main{
 }
-.maincard .cardimage{display: flex;
+.theway {
+    color: orangered;
+}
+
+.text {
+    color: orangered;
+}
+
+.hpbtn {
+    background-color: orangered;
+}
+
+.body {
+    color: white;
+    padding: 10%;
+}
+
+.card {
+    background-size: cover;
     justify-content: space-between;
 }
-.yoga{margin-right: 53%;}
+
+.cardimage img {
+    height: 30vh;
+
+    ;
+}
+
+.maincard .cardimage {
+    display: flex;
+    justify-content: space-between;
+}
+
+.yoga {
+    margin-right: 53%;
+}
+
+.input {
+    height: 7vh;
+    width: 30px;
+}
+
+.input-form-search input{
+    height: 45px;
+    /* width: 100px !important; */
+    margin-top: 10px;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import "../../Assets/Style/AdminViewblogs.css"
 import { Link } from 'react-router-dom'
-import { FaSearch } from "react-icons/fa";
+// import { FaSearch } from "react-icons/fa";
 function AdminViewblogs() {
   return (
     <div className='Admin_viewblog_container'>
@@ -84,7 +84,7 @@ function AdminViewblogs() {
       <div className='view_search'>
 
 <h4>Search blog..</h4>
-<FaSearch className='icon'/>
+{/* <FaSearch className='icon'/> */}
 <input type='text' placeholder='Type here..' id='input'/>
 <input type='button' value="search" id='search'/>
 

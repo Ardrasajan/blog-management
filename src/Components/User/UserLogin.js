@@ -1,7 +1,7 @@
 import React from 'react'
 import "../../Assets/Style/UserLogin.css"
-import { FaUser } from "react-icons/fa";
-import { FaLock } from "react-icons/fa";
+// import { FaUser } from "react-icons/fa";
+// import { FaLock } from "react-icons/fa";
 
 function UserLogin() {
   return (
@@ -12,11 +12,11 @@ function UserLogin() {
           <h1>User Login</h1>
           <div className='User_login_input'>
             <input type='text' placeholder='username' required />
-            <FaUser className='user_login_icon' />
+            {/* <FaUser className='user_login_icon' /> */}
           </div>
           <div className='User_login_input'>
             <input type='password' placeholder='password' required />
-            <FaLock className='user_login_icon' />
+            {/* <FaLock className='user_login_icon' /> */}
           </div>
           <div className='user_login_remember'>
             <label><input type='checkbox' /> Remember me</label>

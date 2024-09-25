@@ -1,13 +1,13 @@
 import React from 'react'
 import "../../Assets/Style/AdminLogin.css"
-import { FaUser } from "react-icons/fa";
-import { FaLock } from "react-icons/fa";
+// import { FaUser } from "react-icons/fa";
+// import { FaLock } from "react-icons/fa";
 
 
 function AdminLogin() {
   return (
     <div className='Admin_login_component'>
-      <div className='Admin_login_container'>
+      {/* <div className='Admin_login_container'>
         <div className='Admin_login_form'>
           <form>
             <h1>Admin Login</h1>
@@ -31,7 +31,7 @@ function AdminLogin() {
 
         </div>
 
-      </div>
+      </div> */}
 
     </div>
   )

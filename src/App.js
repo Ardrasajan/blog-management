@@ -14,6 +14,7 @@ import AdminCategory from './Components/Admin/AdminCategory.js';
 
 import AdminViewblogs from './Components/Admin/AdminViewblogs.js';
 import AdminUsers from './Components/Admin/AdminUsers.js';
+import AdminViewpostLit from './Components/Admin/AdminViewpostLit.js'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
          <Route path="/adminviewblogs" element={<AdminDashboardContent data='viewblogs'/>}/>
          <Route path="/adminusers" element={<AdminDashboardContent data='users'/>}/>
         <Route path="/Homepage1" element={<Homepage/>}/>
+        <Route path="/viewpost1" element={<AdminViewpostLit />}/>
       </Routes>
        {/* <AdminLogin/>  */}
       {/* <UserLogin/> */}
@@ -40,7 +42,8 @@ function App() {
       
       {/* <AdminViewblogs/> */}
       {/* <AdminUsers/> */}
-      
+      {/* < AdminViewpostLit/> */}
+
     </BrowserRouter>
   
   );

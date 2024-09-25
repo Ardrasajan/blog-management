@@ -5,6 +5,7 @@ import { FaListUl } from "react-icons/fa6"
 import { FaBlogger,FaEdit,FaUsers  } from "react-icons/fa"
 import { MdDeleteSweep } from "react-icons/md"
 import { Link } from 'react-router-dom';
+import { VscSignOut } from "react-icons/vsc";
 
 function AdminDashboard() {
   return (
@@ -21,6 +22,7 @@ function AdminDashboard() {
   <Link to="/adminviewblogs" className="item"><FaEdit className='icons'/>View Blogs</Link><br></br>
   
   <Link to="/adminusers" className="item"><FaUsers className='icons'/>Users</Link><br></br>
+  <Link to="#" className="item"><VscSignOut className='icons'/>LogOut</Link><br></br>
   
 
 </div>

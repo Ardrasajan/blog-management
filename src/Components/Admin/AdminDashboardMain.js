@@ -20,7 +20,7 @@ function AdminDashboardMain() {
 
               <FaSearch className='icon'/>
               <input type='text' placeholder='Type here..' id='input'/>
-              <input type='button' value="search" id='search'/>
+              <input type='button' value="search" id='find1'/>
             
 
           </div>

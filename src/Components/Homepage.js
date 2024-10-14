@@ -4,8 +4,8 @@ import "../Assets/Style/Homepage.css"
 function Homepage() {
     return (
         <div className='main'>
-            <div className='Header'>
-                <nav class="navbar navbar-expand-lg bg-body-dark">
+            <div className='Header '>
+                <nav class="navbar navbar-expand-lg bg-body-dark header_main">
                     <div class="container-fluid">
                         <a class="navbar-brand text-light" href="#"><span className='text'>Blog</span> Management</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,17 +19,16 @@ function Homepage() {
                                 <li class="nav-item">
                                     <a class="nav-link active text-light" aria-current="page" href="#">About</a>
                                 </li>
-                                
+
                                 <li class="nav-item">
                                     <a class="nav-link active text-light" aria-current="page" href="#">Blog</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <form class="d-flex" role="search">
-                        <input type='text' placeholder='enter here'/>
-                        {/* <input class="form-control me-2 bg-dark text-light" type="search" placeholder="Search" aria-label="Search" /> */}
-                        <button class="btn btn-success" type="submit">Search</button>
+                    <form class="d-flex input-form-search" role="search">
+                        <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
 
                 </nav>
@@ -44,7 +43,7 @@ function Homepage() {
 
                     <h1 className='theway'> “The way to get started is to quit talking and begin doing.” </h1><span>-Walt Disney</span>
                 </div>
-                
+
             </div>
             <div className='card container text-center maincard '>
                 <div class="row align-items-start cardimage ">
@@ -61,7 +60,7 @@ function Homepage() {
                         <div class="card-body">
                             <h4 class="card-title">“Only the very weak-minded refuse to be ...”</h4>
                             <p class="card-text">― Cassandra Clare, Clockwork Angel</p>
-                            <a href="#" class="btn btn-success">Read more</a>
+                            <a href="Blog" class="btn btn-success">Read more</a>
                         </div>
                     </div>
                     <div class="card" style={{ width: '18rem' }}>
@@ -97,7 +96,7 @@ function Homepage() {
                         <div class="card-body">
                             <h4 class="card-title">“The yoga pose you avoid the most you need the most.” </h4>
                             <p class="card-text">- B.K.S. Iyengar</p>
-                            <a href="#" class="btn btn-success">Read more</a>
+                            <a href="Blog" class="btn btn-success">Read more</a>
                         </div>
                     </div>
 

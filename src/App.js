@@ -10,7 +10,8 @@ import UserLogin from './Components/User/UserLogin.js';
 import AdminDashboard from './Components/Admin/AdminDashboard.js';
 import AdminDashboardContent from './Components/Admin/AdminDashboardContent.js';
 import AdminCategory from './Components/Admin/AdminCategory.js';
-
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/js/bootstrap.bundle.min.js"
 
 import AdminViewblogs from './Components/Admin/AdminViewblogs.js';
 import AdminUsers from './Components/Admin/AdminUsers.js';
@@ -51,6 +52,7 @@ function App() {
    
 
       {/* < AdminViewpostLit/> */}
+      {/* <AdminCategory/> */}
 
 
     </BrowserRouter>

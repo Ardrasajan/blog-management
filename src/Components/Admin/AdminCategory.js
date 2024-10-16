@@ -25,7 +25,7 @@ function AdminCategory() {
             <Link to='#' className='btn Admin_add_category'>Add Category</Link>
             </div>
             <div className='AdminCategory_table_container'>
-            <table className='table table-striped AdminCategory_table'>
+            <table className='table  table-group-divider table-hover table-striped AdminCategory_table'>
   <thead>
     <tr>
       <th scope="col">S.No</th>

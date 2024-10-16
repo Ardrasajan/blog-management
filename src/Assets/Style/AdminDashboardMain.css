@@ -53,7 +53,7 @@ margin-right: 4px;
     margin-top: 70px;
     height: 200px;
     
-    
+    color: chocolate;
     align-items: center;
     justify-content: space-between;
 
@@ -63,7 +63,9 @@ margin-right: 4px;
     border: 1px solid chocolate;
     height: 200px;
     width: 250px;
+    text-decoration: none;
     text-align: center;
+   
     border-radius: 10px;
     background-color:bisque;
     box-shadow: 0 0 10px chocolate;
@@ -89,4 +91,8 @@ margin-right: 4px;
     gap: 1px;
     
     justify-content:space-evenly;
+}
+#Admin_dashboard_link {
+    color: chocolate;
+    text-decoration: none;
 }

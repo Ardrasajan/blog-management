@@ -1,4 +1,36 @@
 .AdminUsers_main{
-    
-    background-color: bisque;
+    min-height: 100vh;
+    width: 1160px;
+    margin: auto;
+    position: static;
+/* background-color: bisque; */
+}
+.AdminUsers_title{
+    margin-left: 20px;
+    margin-top: 30px ;
+    border-bottom: 2px solid chocolate;
+    display: flex;
+   
+    align-items: center;
+
+}
+.AdminUsers_table_container{
+    width: 1000px;
+    height:fit-content;
+    margin: auto;
+    margin-top: 50px;
+   
+}
+.AdminUsers_table{
+    border: 2px solid chocolate;
+    border-radius: 20px;
+    color: chocolate;
+
+}
+.AdminUsers_icon{
+height: 50px;
+width: 50px;
+}
+.AdminUsers_title h3{
+    margin-left: 20px;
 }

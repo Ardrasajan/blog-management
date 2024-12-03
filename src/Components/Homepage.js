@@ -52,7 +52,7 @@ function Homepage() {
                         <div class="card-body text-dark ">
                             <h4 class="card-title">“Where words fail, music speaks.” </h4>
                             <p class="card-text">— Hans Christian Andersen</p>
-                            <a href="#" class="btn btn-success">Read more</a>
+                            <a href="Blog" class="btn btn-success">Read more</a>
                         </div>
                     </div>
                     <div class="card" style={{ width: '20rem' }}>
@@ -68,7 +68,7 @@ function Homepage() {
                         <div class="card-body">
                             <h4 class="card-title">"True disputants are like true..."</h4>
                             <p class="card-text">- Alexander Pope</p>
-                            <a href="#" class="btn btn-success">Read more</a>
+                            <a href="Blog" class="btn btn-success">Read more</a>
                         </div>
                     </div>
                     <br ></br >
@@ -77,7 +77,7 @@ function Homepage() {
                         <div class="card-body">
                             <h4 class="card-title">"Let food be thy medicine ..."</h4>
                             <p class="card-text"> - Hippocrates</p>
-                            <a href="#" class="btn btn-success">Read more</a>
+                            <a href="Blog" class="btn btn-success">Read more</a>
                         </div>
                     </div>
                     
@@ -88,7 +88,7 @@ function Homepage() {
                         <div class="card-body">
                             <h4 class="card-title">Any sufficiently advanced technology is equivalent to magic.</h4>
                             <p class="card-text"></p>
-                            <a href="#" class="btn btn-success">Read more</a>
+                            <a href="Blog" class="btn btn-success">Read more</a>
                         </div>
                     </div>
                     <div class="card yoga" style={{ width: '18rem' }}>

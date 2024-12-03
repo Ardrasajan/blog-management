@@ -3,19 +3,10 @@ import "./App.css";
 import Homepage from "./Components/Homepage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap/dist/js/bootstrap.bundle.min.js"
-import AdminLogin from './Components/Admin/AdminLogin.js';
 import UserLogin from './Components/User/UserLogin.js';
-import AdminDashboard from './Components/Admin/AdminDashboard.js';
-import AdminDashboardContent from './Components/Admin/AdminDashboardContent.js';
-import AdminCategory from './Components/Admin/AdminCategory.js';
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap/dist/js/bootstrap.bundle.min.js"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import AdminLogin from "./Components/Admin/AdminLogin.js";
-import UserLogin from "./Components/User/UserLogin.js";
 import AdminDashboard from "./Components/Admin/AdminDashboard.js";
 import AdminDashboardContent from "./Components/Admin/AdminDashboardContent.js";
 import AdminCategory from "./Components/Admin/AdminCategory.js";
@@ -25,9 +16,6 @@ import AdminUsers from './Components/Admin/AdminUsers.js';
 import Blog from './Components/Blog.js';
 import AdminViewpostLit from './Components/Admin/AdminViewpostLit.js'
 
-import AdminViewblogs from "./Components/Admin/AdminViewblogs.js";
-import AdminUsers from "./Components/Admin/AdminUsers.js";
-import Blog from "./Components/Blog.js";
 import Profile from "./Components/Profile.js";
 // import RegistrationForm from "./Components/RegistrationForm";
 

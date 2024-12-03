@@ -12,8 +12,8 @@ function AdminCreateBlogs() {
         </div>
         <div className='Admin_create_post_contanier'>
           <form>
-            <lable>post title</lable><br></br>
-            <input type='text'  placeholder='Enter title'/><br></br>
+            <lable>Post Title</lable><br></br>
+            <input type='text'  placeholder='Enter Title'/><br></br>
             <label>Category</label><br></br>
             <select name='category'>
               <option value='category1'>category1</option>
@@ -22,7 +22,7 @@ function AdminCreateBlogs() {
 
             </select>
             <div className='admin_enter_post'>
-              <label className='post'>post Details</label><br></br>
+              <label className='post'>Post Content.</label><br></br>
               <textarea ></textarea>
          
             <div className='admin_select_image'>

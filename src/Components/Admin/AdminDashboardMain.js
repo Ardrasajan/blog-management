@@ -4,6 +4,7 @@ import '../../Assets/Style/AdminDashboardMain.css'
 import { MdLibraryBooks } from "react-icons/md";
  import { FaUsers } from "react-icons/fa"
 import { BiSolidCategory } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 
 function AdminDashboardMain() {
@@ -20,7 +21,7 @@ function AdminDashboardMain() {
 
               <FaSearch className='icon'/>
               <input type='text' placeholder='Type here..' id='input'/>
-              <input type='button' value="search" id='search'/>
+              <input type='button' value="search" id='find1'/>
             
 
           </div>
@@ -29,17 +30,20 @@ function AdminDashboardMain() {
         <div className='Admin_dashboard_rowcontainer'>
           <div class="row g-3 dashboard_row">
             <div class="col-4 dashboard_col">
-            <MdLibraryBooks classNa me='dashboardicons'/>
-              <div class="p-2 ">Blogs</div>
+            <MdLibraryBooks className='dashboardicons'/>
+              <div  className="p-2">
+              <Link to="/adminviewblogs" id='Admin_dashboard_link'>Blogs</Link></div>
             </div>
             
             <div class="col-4 dashboard_col">
             <FaUsers className='dashboardicons'/>
-              <div class="p-2"> Users</div>
+              <div className="p-2"> 
+                <Link to="/adminusers" id='Admin_dashboard_link' >Users</Link></div>
             </div>
             <div class="col-4 dashboard_col">
             <BiSolidCategory className='dashboardicons' />
-              <div class="p-2">Categories</div>
+              <div className="p-2">
+              <Link to="/admincategory" id='Admin_dashboard_link'>Categories</Link></div>
             </div>
 
           </div>

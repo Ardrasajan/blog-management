@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Blog() {
@@ -10,7 +11,7 @@ function Blog() {
                         <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light " href="#">News</a>
+                        <Link class="nav-link text-light " to="https://www.forbes.com/sites/hughmcintyre/2024/09/25/can-lady-gaga-hit-no-1-with-her-surprise-joker-folie--deux-album/">News</Link>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link text-light" href="#">Video</a>

@@ -17,7 +17,7 @@ import Blog from './Components/Blog.js';
 import AdminViewpostLit from './Components/Admin/AdminViewpostLit.js'
 
 import Profile from "./Components/Profile.js";
-// import RegistrationForm from "./Components/RegistrationForm";
+import RegistrationForm from "./Components/RegistrationForm.js";
 
 function App() {
   return (
@@ -66,7 +66,7 @@ function App() {
         <Route path="/Homepage1" element={<Homepage />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Profile" element={<Profile />} />
-        {/* <Route path="/RegistrationForm" element={<RegistrationForm />} /> */}
+        <Route path="/RegistrationForm" element={<RegistrationForm />} />
       </Routes>
       {/* <AdminLogin/>  */}
       {/* <UserLogin/> */}

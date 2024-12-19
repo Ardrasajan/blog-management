@@ -4,8 +4,7 @@ import Homepage from "./Components/Homepage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import UserLogin from './Components/User/UserLogin.js';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
 import AdminLogin from "./Components/Admin/AdminLogin.js";
 import AdminDashboard from "./Components/Admin/AdminDashboard.js";
 import AdminDashboardContent from "./Components/Admin/AdminDashboardContent.js";
@@ -17,7 +16,7 @@ import Blog from './Components/Blog.js';
 import AdminViewpostLit from './Components/Admin/AdminViewpostLit.js'
 
 import Profile from "./Components/Profile.js";
-import RegistrationForm from "./Components/RegistrationForm.js";
+import RegistrationForm, { Registation } from "./Components/RegistrationForm.js";
 
 function App() {
   return (
@@ -66,7 +65,8 @@ function App() {
         <Route path="/Homepage1" element={<Homepage />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Profile" element={<Profile />} />
-        <Route path="/RegistrationForm" element={<RegistrationForm />} />
+        <Route path="/RegistrationForm" element={<Registation />} />
+        {/* <Route path="/todo"element={<LearnLs/>}/> */}
       </Routes>
       {/* <AdminLogin/>  */}
       {/* <UserLogin/> */}

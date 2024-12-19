@@ -1,13 +1,50 @@
-.registration-form{  width:80%;
+.blog-signUp {
   height: 100vh;
-  padding: 8%;
-  margin-top:10px;
-margin-left: 10%;
-  display:flex;
-      align-items:center;
-background-attachment: fixed;
-background-size: contain;
-background-color: rgb(216, 189, 169)};
+  width: 100%;
+}
+.blog-signUp-rightBox {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blog-signUp-leftBox {
+  height: 100vh;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.blog-signUp-inputBox {
+  height: 70vh;
+  width: 70%;
+  border-radius: 20px;
+}
+.blog-signUp-leftBox h1 {
+  margin-top: 10%;
+}
+.blog-signUp-leftBox img {
+  height: 60%;
+  width: 60%;
+  margin-top: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-signUp-inputBox-btn {
+  background-color: blue;
+  font-size: 20px;
+  font-weight: 600px;
+  height: 45px;
+  width: 150px;
+  color: white;
+  border-radius: 20px;
+}
+
+.blog-signUp-inputBox label
+{
+  text-align: left !important;
+}
 
   
   

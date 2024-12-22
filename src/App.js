@@ -24,6 +24,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
 
+{/* common routes  */}
+
+        {/* user routes  */}
+
+
+{/* admin routes  */}
         <Route path="/adminlogin" element={<AdminLogin/>}/> 
         <Route path="/userlogin" element={<UserLogin/>}/>
         <Route path="/adminsidebar" element={<AdminDashboard/>}/>
@@ -65,7 +71,7 @@ function App() {
         <Route path="/Homepage1" element={<Homepage />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Profile" element={<Profile />} />
-        <Route path="/RegistrationForm" element={<Registation />} />
+        <Route path="/user/signup" element={<Registation />} />
         {/* <Route path="/todo"element={<LearnLs/>}/> */}
       </Routes>
       {/* <AdminLogin/>  */}

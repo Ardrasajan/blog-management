@@ -4,28 +4,43 @@
 }
 .blog-signUp-rightBox {
   height: 100vh;
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .blog-signUp-leftBox {
+  /* background-color: aqua; */
   height: 100vh;
   width: 50%;
+
+  
+  justify-content: center;
+  align-items: center;
+}
+.blog-signUp-leftBox-content{
+  
+  margin-left: 200px;
+  margin-top: 100px;
   justify-content: center;
   align-items: center;
 }
 .blog-signUp-inputBox {
-  height: 70vh;
-  width: 70%;
+  height: 87vh;
+  width: 90%;
   border-radius: 20px;
 }
+.blog-signUp-inputBox h4{
+color: rgb(227, 24, 207);
+text-align: center;
+}
 .blog-signUp-leftBox h1 {
+  color:rgb(227, 24, 207) ;
   margin-top: 10%;
 }
 .blog-signUp-leftBox img {
-  height: 60%;
-  width: 60%;
+  height: 80%;
+  width: 80%;
   margin-top: 5%;
   justify-content: center;
   align-items: center;
@@ -45,6 +60,27 @@
 {
   text-align: left !important;
 }
+.blog-signUp-inputBox-btn{
+  background-color: rgb(227, 24, 207);
+  margin-left: 250px;
+}
+.user_signup_forgetpassword{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user_signup_forgetpassword a{
+  padding-right: 20px;
+  text-decoration: none;
+  color: rgb(227, 24, 207);
+}
+.user_signup_forgetpassword a span{
+  margin-left: 50px;
+}
+.user_signup_select{
+  width:300px ;
+  height: 35px;
+  color:black;
+  border-color: black;
 
-  
-  
+}

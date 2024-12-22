@@ -3,43 +3,78 @@ import "../Assets/Style/Registration.css";
 import img from "../Assets/Images/img1.jpg";
 export const Registation = () => {
   return (
+    // todo include navbar with blog mgmt on left...home,signin,signout on rightside
+    //navigate to sign in page
+    // need to design forget password page....email,password, newpassword
     <div className="row blog-signUp  ">
       <div class="col-6 blog-signUp-leftBox">
-        <h1>Blog Management</h1>
+        <div className="blog-signUp-leftBox-content">
+        <h1>Blog Management</h1><br></br>
         <img src={img} alt="" />
+        </div>
       </div>
       <div class="col-6 blog-signUp-rightBox ">
         <div className="blog-signUp-inputBox shadow">
-          <h1 className="my-4">Sign Up</h1>
+          <h4 className="my-4 header">Sign Up</h4>
           <form action="">
             <div class="row my-3 mx-2">
               <div class="col">
-                <label htmlFor="">First name</label>
+                <label htmlFor="">User Name</label>
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="First name"
+                  placeholder="Username"
                 />
               </div>
               <div class="col">
-                <label htmlFor="">last Name</label>
+                <label htmlFor="">Email</label>
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Last name"
+                  placeholder="Enter email id here"
                 />
               </div>
             </div>
             <div class="row my-3 mx-2">
-              <div class="col">
-                <label htmlFor="">Contact</label>
-                <input type="text" class="form-control" placeholder="contact" />
+            <div class="col">
+                <label htmlFor="">Date of Birth</label>
+                <input type="text" class="form-control" placeholder="dob" />
               </div>
               <div class="col">
-                <label htmlFor="">Email</label>
-                <input type="text" class="form-control" placeholder="Email" />
+              <label>Select the Gender:</label><br></br>
+              <select name="gender" className="form-control user_signup_select">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+           
+          </select>
+
+              </div>
+              </div>
+            <div class="row my-3 mx-2">
+              <div class="col">
+                <label htmlFor="">place</label>
+                <input type="text" class="form-control" placeholder="place" />
+              </div>
+              <div class="col">
+                <label htmlFor="">City</label>
+                <input type="text" class="form-control" placeholder="City" />
               </div>
             </div>
+            <div class="row my-3 mx-2">
+            <div class="col">
+            <label>select state</label>
+          <br></br>
+          <select name="state" className="form-control user_signup_select" >
+            <option value="TamilNadu">TamilNadu</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Karnataka">Karnataka</option>
+          </select>
+            </div>
+            <div class="col">
+                <label htmlFor="">Phone number</label>
+                <input type="text" class="form-control" placeholder="phone number" />
+              </div>
+              </div>
             <div class="row my-3 mx-2">
               <div class="col">
                 <label htmlFor="">Password</label>
@@ -60,7 +95,13 @@ export const Registation = () => {
             </div>
 
             <button className="blog-signUp-inputBox-btn my-3">Sign Up</button>
-            <h6 className="my-3 text-primary">Forget Password ?</h6>
+            <div className="user_signup_forgetpassword">
+            <a href='#' className="my-3 ">Forget Password ?</a>
+            <a href='#' className="my-3 ">Already have an account? Login</a>
+            
+            
+            </div>
+            
           </form>
         </div>
       </div>

@@ -19,7 +19,7 @@ function AdminCreateBlogs() {
     
     const {title, category, postContent} = blogdata;
      // do front-end validation here. 
-    // sendDataToServer();
+    sendDataToServer();
   };
 
   const sendDataToServer = async () => {

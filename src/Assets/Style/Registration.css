@@ -84,3 +84,10 @@ text-align: center;
   border-color: black;
 
 }
+.user_signup_main .signup_navbar{
+ background-color: rgb(247, 210, 243);
+
+}
+.nav_blog_item{
+  margin-left: 500px;
+}

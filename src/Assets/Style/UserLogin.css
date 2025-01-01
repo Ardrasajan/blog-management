@@ -60,7 +60,7 @@
   
   }
   .User_login_input input::placeholder{
-      color: white;
+      color:;
   }
   .user_login_input .user_login_icon{
       position: absolute;
@@ -84,7 +84,7 @@
   }
   .user_login_remember a{
       margin-top: 25px;
-      color: white;
+      color: chocolate;
       text-decoration: none;
   
   }
@@ -102,7 +102,7 @@
       box-shadow: 0 0 10px rgba(0,0,0, .1);
       cursor: pointer;
       font-size: 16px;
-      color: black;
+      color: chocolate;
       font-weight: 700;
   
   }
@@ -113,7 +113,7 @@
   }
   .user_login_register p a{
       margin-top: 30px;
-      color:black;
+      color:chocolate;
       text-decoration: none;
       font-weight: 600;
   }

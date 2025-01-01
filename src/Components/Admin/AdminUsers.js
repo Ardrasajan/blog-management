@@ -2,8 +2,43 @@ import React from "react";
 import "../../Assets/Style/AdminUsers.css";
 import { Link } from "react-router-dom";
 import { FaUsers } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 function AdminUsers() {
+  const [allusers, setallusers] = useState([]);
+const getDataFromServer=async()=>{
+  try{
+    
+    
+    const res=await axios.get("http://localhost:8000/user/findallusers");
+  
+ console.log("resp",res);
+ 
+  if(res.status===200){
+    toast.success("users found")
+    setallusers(res.data.data);
+  }
+  
+}catch(error){
+  const msg=error?.response?.data?.message;
+  alert(msg);
+  console.log("error on finding user",error);}
+  
+}
+
+
+
+  useEffect(() => {
+    getDataFromServer();
+  }, []);
+  console.log(allusers);
+  
+
+
+  
+
   return (
     <div className="AdminUsers_main">
       <div className="AdminUsers_title">
@@ -17,55 +52,28 @@ function AdminUsers() {
               <th scope="col">S.no</th>
               <th scope="col">Name</th>
               <th scope="col">Email</th>
-              <th scope="col">Date Added</th>
+              <th scope="col">City</th>
               <th scope="col">Actions</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Mark@gmail.com</td>
-              <td>14/8/2024</td>
-              <td>
-                <Link to="#" className="btn btn-info">
-                  View
-                </Link>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Jacob@gmail.com</td>
-              <td>3/9/2024</td>
-              <td>
-                <Link to="#" className="btn btn-info">
-                  View
-                </Link>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Thornton</td>
-              <td>Thornton@twitter</td>
-              <td>15/9/2024</td>
-              <td>
-                <Link to="#" className="btn btn-info">
-                  View
-                </Link>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>Larry</td>
-              <td>Larry@twitter</td>
-              <td>20/11/2024</td>
-              <td>
-                <Link to="#" className="btn btn-info">
-                  View
-                </Link>
-              </td>
-            </tr>
+            {allusers.map((e, index) => {
+              return (
+            
+                  <tr key={e.id}>
+                    <th scope="row">{index + 1}</th>
+                    <td>{e.userName}</td>
+                    <td>{e.email}</td>
+                    <td>{e.city}</td>
+                    <td>
+                      <Link to="#" className="btn btn-info">
+                        View
+                      </Link>
+                    </td>
+                  </tr>
+                
+              );
+            })}
           </tbody>
         </table>
       </div>

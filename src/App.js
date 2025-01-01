@@ -18,7 +18,9 @@ import AdminViewpostLit from "./Components/Admin/AdminViewpostLit.js";
 import Profile from "./Components/Profile.js";
 // import RegistrationForm, { Registation } from "./Components/RegistrationForm.js";
 import Registation from "./Components/RegistrationForm.js";
+import ViewAllUsers from "./Components/User/ViewAllUsers.js";
 import {Toaster} from 'react-hot-toast'
+import ViewProfile from "./Components/User/ViewProfile.js";
 
 function App() {
   return (
@@ -90,7 +92,9 @@ function App() {
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/user/signup" element={<Registation />} />
+        <Route path="/user/viewall" element={<ViewAllUsers/>}/>
         {/* <Route path="/todo"element={<LearnLs/>}/> */}
+        <Route path="/user/viewprofile/:id" element={<ViewProfile/>}/>
       </Routes>
       {/* <AdminLogin/>  */}
       {/* <UserLogin/> */}

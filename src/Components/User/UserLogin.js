@@ -52,7 +52,7 @@ function UserLogin() {
             <div className="User_login_input">
               <input
                 type="text"
-                placeholder="userName"
+                placeholder="UserName"
                 required
                 name="userName"
                 onChange={change}
@@ -62,7 +62,7 @@ function UserLogin() {
             <div className="User_login_input">
               <input
                 type="password"
-                placeholder="password"
+                placeholder="Password"
                 required
                 name="password"
                 onChange={change}

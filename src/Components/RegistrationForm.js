@@ -4,7 +4,7 @@ import img from "../Assets/Images/img1.jpg";
 import axios from "axios";
 import React, { useState } from "react";
 import {toast} from 'react-hot-toast'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Registation() {
   const navigate = useNavigate();
@@ -97,7 +97,7 @@ function Registation() {
     <div className="user_signup_main">
       <nav className="navbar navbar-expand-lg  signup_navbar">
         <div className="container-fluid">
-          <a className="navbar-brand fs-3 ms-2 fw-bold" href="#">
+          <a className="navbar-brand fs-3 ms-2 fw-bold ps-4" href="#">
             Blog Management
           </a>
           <button
@@ -133,21 +133,13 @@ function Registation() {
                   Signup
                 </a>
               </li>
+              <li className="nav-item me-5 fw-bold">
+                <a className="nav-link" href="#">
+                  view users
+                </a>
+              </li>
             </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-1 rounded-2 mt-3 h-25 w-100"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button
-                className="btn btn-outline-success h-25 mt-3"
-                type="submit"
-              >
-                Search
-              </button>
-            </form>
+            
           </div>
         </div>
       </nav>
@@ -296,12 +288,10 @@ function Registation() {
                 Sign Up
               </button>
               <div className="user_signup_forgetpassword">
-                <a href="#" className="my-3 ">
-                  Forget Password ?
-                </a>
-                <a href="#" className="my-3 ">
+                
+                <Link to="/user/login" className="my-3 ">
                   Already have an account? Login
-                </a>
+                </Link>
               </div>
             </form>
           </div>

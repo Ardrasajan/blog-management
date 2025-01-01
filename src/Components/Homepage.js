@@ -51,6 +51,16 @@ function Homepage() {
                     Blog
                   </a>
                 </li>
+                
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-light"
+                    aria-current="page"
+                    href="#"
+                  >
+                    Users
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

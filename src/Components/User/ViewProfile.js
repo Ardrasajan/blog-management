@@ -4,6 +4,7 @@ import img from "../../Assets/Images/vecteezy_default-profile-picture-avatar-use
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function ViewProfile() {
     const [viewuser,setviewuser]=useState([]);
@@ -58,42 +59,42 @@ function ViewProfile() {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item fw-bold">
-                  <a
+                  <Link
                     class="nav-link active ms-5"
                     aria-current="page"
-                    href="#"
+                    to="/Homepage1"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item ms-5 fw-bold">
-                  <a
+                  <Link
                     class="nav-link active"
                     aria-current="page"
-                    href="#"
+                    to="#"
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
 
                 <li class="nav-item ms-5 fw-bold">
-                  <a
+                  <Link
                     class="nav-link active"
                     aria-current="page"
-                    href="#"
+                    to="/adminviewblogs"
                   >
                     Blog
-                  </a>
+                  </Link>
                 </li>
 
                 <li class="nav-item ms-5 fw-bold">
-                  <a
+                  <Link
                     class="nav-link active"
                     aria-current="page"
-                    href="#"
+                    to="/user/viewall"
                   >
                     Users
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

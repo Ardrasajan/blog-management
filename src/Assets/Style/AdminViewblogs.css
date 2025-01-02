@@ -31,6 +31,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 17px;
+    /* margin-bottom: 10px; */
     
 }
 .card_container .rows .col .cards {
@@ -98,5 +99,19 @@
 .categorylist .Linkview:hover{
 
     cursor: pointer;
+    color: rgb(251, 141, 141);
+}
+.Admin_viewblogs_button{
+    height: 40px;
+    width: 150px;
+    border-radius: 8px;
+    background-color: rgb(250, 143, 67);
+    border:0cm;
     color: white;
 }
+/* .viewblogs_text{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    max-width: 100%; 
+} */

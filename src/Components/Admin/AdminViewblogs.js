@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { FaSearch } from "react-icons/fa";
 import axios from 'axios';
 import img from "../../Assets/Images/stories-of-the-true.png"
+import {BASE_URL} from "../../api/api"
 function AdminViewblogs() {
   const [allblogs,setallblogs]=useState([])
   const getDataFromServer=async()=>{
@@ -39,13 +40,15 @@ console.log(allblogs);
              
                 {
                   allblogs.map((e,index)=>{
+                    let blogImg = `${BASE_URL}/${e.blogImg}`
+                    console.log('blo',blogImg)
                     return(
                       <div className="col-4">
                 <div className="card cards mb-4" style={{ minWidth: '10rem', maxHeight: '21rem' }}>
-                  <img src={img} className="card-img-top" alt="" />
+                  <img src={blogImg} className="card-img-top" alt="" />
                   <div className="card-body">
                     <h5 className="card-title">{e.title}</h5>
-                    <p className="card-text viewblogs_text">{e.postContent.substring(0,20) +"..."}</p>
+                    <p className="card-text viewblogs_text">{e.postContent?.substring(0,20) +"..."}</p>
                     <Link to="#">
                     <button className='Admin_viewblogs_button'>Read more..</button></Link>
                   </div>

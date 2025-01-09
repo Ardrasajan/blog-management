@@ -1,5 +1,6 @@
 import React from "react";
-import "../Assets/Style/Homepage.css";
+import "../../src/Assets/Style/Homepage.css";
+import { Link } from "react-router-dom";
 
 function Homepage() {
   return (
@@ -7,9 +8,9 @@ function Homepage() {
       <div className="Header ">
         <nav class="navbar navbar-expand-lg bg-body-dark header_main">
           <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">
+            <Link class="navbar-brand text-light" to="/Homepage1">
               <span className="text">Blog</span> Management
-            </a>
+            </Link>
             <button
               class="navbar-toggler"
               type="button"
@@ -24,57 +25,53 @@ function Homepage() {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a
-                    class="nav-link active text-light"
+                  <Link
+                    class="nav-link active text-light ms-2"
                     aria-current="page"
-                    href="#"
+                    to="/Homepage1"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item">
-                  <a
+                  <Link
                     class="nav-link active text-light"
                     aria-current="page"
-                    href="#"
+                    to="#"
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
 
                 <li class="nav-item">
-                  <a
+                  <Link
                     class="nav-link active text-light"
                     aria-current="page"
-                    href="#"
+                    to=""
                   >
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 
                 <li class="nav-item">
-                  <a
+                  <Link
                     class="nav-link active text-light"
                     aria-current="page"
-                    href="#"
+                    to="/user/viewall"
                   >
                     Users
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
+          </div >
+          <div >
+            <Link className="nav-link active text-light" to="/user/login"  id="Homepage_login">
+            Login
+            </Link>
+            
+
           </div>
-          <form class="d-flex input-form-search" role="search">
-            <input
-              class="form-control me-2 "
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </nav>
       </div>
       <div className="body w-100 row ">
@@ -97,9 +94,9 @@ function Homepage() {
             <div class="card-body text-dark ">
               <h4 class="card-title">“Where words fail, music speaks.” </h4>
               <p class="card-text">— Hans Christian Andersen</p>
-              <a href="Blog" class="btn btn-success">
+              <Link to="Blog" class="btn btn-success">
                 Read more
-              </a>
+              </Link>
             </div>
           </div>
           <div class="card" style={{ width: "20rem" }}>
@@ -113,9 +110,9 @@ function Homepage() {
                 “Only the very weak-minded refuse to be ...”
               </h4>
               <p class="card-text">― Cassandra Clare, Clockwork Angel</p>
-              <a href="Blog" class="btn btn-success">
+              <Link to="Blog" class="btn btn-success">
                 Read more
-              </a>
+              </Link>
             </div>
           </div>
           <div class="card" style={{ width: "18rem" }}>
@@ -127,9 +124,9 @@ function Homepage() {
             <div class="card-body">
               <h4 class="card-title">"True disputants are like true..."</h4>
               <p class="card-text">- Alexander Pope</p>
-              <a href="Blog" class="btn btn-success">
+              <Link to="Blog" class="btn btn-success">
                 Read more
-              </a>
+              </Link>
             </div>
           </div>
           <br></br>
@@ -142,9 +139,9 @@ function Homepage() {
             <div class="card-body">
               <h4 class="card-title">"Let food be thy medicine ..."</h4>
               <p class="card-text"> - Hippocrates</p>
-              <a href="Blog" class="btn btn-success">
+              <Link to="Blog" class="btn btn-success">
                 Read more
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -159,9 +156,9 @@ function Homepage() {
                 Any sufficiently advanced technology is equivalent to magic.
               </h4>
               <p class="card-text"></p>
-              <a href="Blog" class="btn btn-success">
+              <Link to="Blog" class="btn btn-success">
                 Read more
-              </a>
+              </Link>
             </div>
           </div>
           <div class="card yoga" style={{ width: "18rem" }}>
@@ -175,15 +172,15 @@ function Homepage() {
                 “The yoga pose you avoid the most you need the most.”{" "}
               </h4>
               <p class="card-text">- B.K.S. Iyengar</p>
-              <a href="Blog" class="btn btn-success">
+              <Link to="Blog" class="btn btn-success">
                 Read more
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
       <div className="footer bg-dark text-light">
-        ngland: Mr John Smith,<br></br> 132, My Street,<br></br> Bigtown BG23
+        England: Mr John Smith,<br></br> 132, My Street,<br></br> Bigtown BG23
         4YZ
       </div>
     </div>

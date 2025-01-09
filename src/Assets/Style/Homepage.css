@@ -5,10 +5,11 @@
     height: 85vh;
     width: 100%;
 }
-.header_main{
+.header_main Link{
+
 }
 .theway {
-    color: orangered;
+    /* color: orangered; */
 }
 
 .text {
@@ -32,7 +33,7 @@
 .cardimage img {
     height: 30vh;
 
-    ;
+    
 }
 
 .maincard .cardimage {
@@ -53,4 +54,9 @@
     height: 45px;
     /* width: 100px !important; */
     margin-top: 10px;
+}
+#Homepage_login{
+  /* background-color:white; */
+  margin-right: 140px;
+  font-size: large;
 }

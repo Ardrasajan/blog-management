@@ -1,10 +1,11 @@
 import "../Assets/Style/Registration.css";
 
 import img from "../Assets/Images/img1.jpg";
-import axios from "axios";
+
 import React, { useState } from "react";
 import {toast} from 'react-hot-toast'
 import { Link, useNavigate } from "react-router-dom";
+import { axiosInstance } from "../api/axiosInstance";
 
 function Registation() {
   const navigate = useNavigate();
@@ -65,8 +66,8 @@ function Registation() {
 
   const sendDataToServer = async () => {
     try {
-      const res = await axios.post(
-        "http://localhost:8000/user/adduser",
+      const res = await axiosInstance.post(
+        "/user/adduser",
         Signupdata
       );
 
@@ -97,9 +98,9 @@ function Registation() {
     <div className="user_signup_main">
       <nav className="navbar navbar-expand-lg  signup_navbar">
         <div className="container-fluid">
-          <a className="navbar-brand fs-3 ms-2 fw-bold ps-4" href="#">
+          <Link className="navbar-brand fs-3 ms-2 fw-bold ps-4" to="/Homepage1">
             Blog Management
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -114,29 +115,28 @@ function Registation() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav_blog_item">
               <li className="nav-item me-5 fw-bold">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link to="/Homepage1" className="nav-link active" aria-current="page" href="#">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item me-5 fw-bold">
-                <a className="nav-link" href="#">
+                <Link href="#" className="nav-link" to="#">
                   About
-                </a>
+                </Link>
+          
               </li>
               <li className="nav-item me-5 fw-bold">
-                <a className="nav-link" href="#">
+              <Link className="nav-link" to="/user/login">
                   Login
-                </a>
+                </Link>
               </li>
               <li className="nav-item me-5 fw-bold">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/user/signup">
                   Signup
-                </a>
+                </Link>
               </li>
               <li className="nav-item me-5 fw-bold">
-                <a className="nav-link" href="#">
-                  view users
-                </a>
+                
               </li>
             </ul>
             
@@ -280,6 +280,16 @@ function Registation() {
                   />
                 </div>
               </div>
+              {/* <div className="profile_picture_container">
+                <div className="profile_picture_preview">
+                <img id="user-image" src="" alt="" />
+
+                </div>
+                <input type="file" id="image-upload" />
+
+
+
+              </div> */}
 
               <button
                 className="blog-signUp-inputBox-btn my-3"

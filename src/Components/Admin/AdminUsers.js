@@ -3,47 +3,54 @@ import "../../Assets/Style/AdminUsers.css";
 import { Link } from "react-router-dom";
 import { FaUsers } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import axios from "axios";
-import toast from "react-hot-toast";
 
+import { axiosInstance } from "../../api/axiosInstance";
 function AdminUsers() {
   const [allusers, setallusers] = useState([]);
-const getDataFromServer=async()=>{
-  try{
-    
-    
-    const res=await axios.get("http://localhost:8000/user/findallusers");
-  
- console.log("resp",res);
- 
-  if(res.status===200){
-    toast.success("users found")
-    setallusers(res.data.data);
+  const [fixedUsers, setfixedUsers] = useState([]);
+
+  const handleChange = (e) => {
+    const value = e.target.value.toLowerCase();
+  if (!value) {
+    setallusers(fixedUsers)
   }
-  
-}catch(error){
-  const msg=error?.response?.data?.message;
-  alert(msg);
-  console.log("error on finding user",error);}
-  
-}
+    const newArr = fixedUsers.filter((u) => {
+      const name = u.userName.toLowerCase();
+      return name.includes(value);
+    });
 
+    setallusers(newArr)
+  };
 
+  const getDataFromServer = async () => {
+    try {
+      const res = await axiosInstance.get("/user/findallusers");
+
+      console.log("resp", res);
+
+      if (res.status === 200) {
+        const data = res.data?.data || [];
+        setallusers(data);
+        setfixedUsers(data);
+      }
+    } catch (error) {
+      const msg = error?.response?.data?.message;
+      alert(msg);
+      console.log("error on finding user", error);
+    }
+  };
 
   useEffect(() => {
     getDataFromServer();
   }, []);
   console.log(allusers);
-  
-
-
-  
 
   return (
     <div className="AdminUsers_main">
       <div className="AdminUsers_title">
         <FaUsers className="AdminUsers_icon" />
         <h3>Users</h3>
+        <input type="text" onChange={handleChange} />
       </div>
       <div className="AdminUsers_table_container">
         <table className="table table-striped table-success table-hover table-group-divider AdminUsers_table">
@@ -59,19 +66,20 @@ const getDataFromServer=async()=>{
           <tbody>
             {allusers.map((e, index) => {
               return (
-            
-                  <tr key={e.id}>
-                    <th scope="row">{index + 1}</th>
-                    <td>{e.userName}</td>
-                    <td>{e.email}</td>
-                    <td>{e.city}</td>
-                    <td>
-                      <Link to="#" className="btn btn-info">
-                        View
-                      </Link>
-                    </td>
-                  </tr>
-                
+                <tr key={e._id}>
+                  <th scope="row">{index + 1}</th>
+                  <td>{e.userName}</td>
+                  <td>{e.email}</td>
+                  <td>{e.city}</td>
+                  <td>
+                    <Link
+                      to={`/adminuserprofile/${e._id}`}
+                      className="btn btn-info"
+                    >
+                      View
+                    </Link>
+                  </td>
+                </tr>
               );
             })}
           </tbody>

@@ -91,3 +91,26 @@ text-align: center;
 .nav_blog_item{
   margin-left: 600px;
 }
+.profile_picture_container{
+
+}
+.profile_picture_preview{
+  width: 150px; 
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+.profile_picture_preview img{
+  width: 150px; 
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+#image-upload{
+  margin-top: 20px;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}

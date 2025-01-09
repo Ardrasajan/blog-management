@@ -21,6 +21,9 @@ import Registation from "./Components/RegistrationForm.js";
 import ViewAllUsers from "./Components/User/ViewAllUsers.js";
 import { Toaster } from "react-hot-toast";
 import ViewProfile from "./Components/User/ViewProfile.js";
+import UserViewblogs from "./Components/User/UserViewblogs.js";
+
+import AdminUserProfile from "./Components/Admin/AdminUserProfile.js";
 
 function App() {
   return (
@@ -37,6 +40,8 @@ function App() {
         <Route path="/user/signup" element={<Registation />} />
         <Route path="/user/viewall" element={<ViewAllUsers />} />
         <Route path="/user/viewprofile/:id" element={<ViewProfile />} />
+        <Route path="/user/viewallblogs" element={<UserViewblogs/>}/>
+    
 
         {/* admin routes  */}
         <Route path="/adminlogin" element={<AdminLogin />} />
@@ -61,6 +66,9 @@ function App() {
           path="/adminusers"
           element={<AdminDashboardContent data="users" />}
         />
+        <Route
+        path="/adminuserprofile/:id"
+        element={<AdminDashboardContent data="userprofile"/>}/>
 
        
 
@@ -88,7 +96,7 @@ function App() {
           path="/adminusers"
           element={<AdminDashboardContent data="users" />}
         />
-<Route path="/adminviewoneblog" element={<AdminDashboardContent data="viewoneblog"/>}/>
+<Route path="/adminviewoneblog/:id" element={<AdminDashboardContent data="viewoneblog"/>}/>
        
 
         {/* <Route path="/todo"element={<LearnLs/>}/> */}

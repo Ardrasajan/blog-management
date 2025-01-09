@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "../../Assets/Style/AdminCreateBlogs.css";
-import axios from "axios";
+
+import { axiosInstance } from "../../api/axiosInstance";
 
 function AdminCreateBlogs() {
   const [blogdata, setblogdata] = useState({
     title: "",
     category: "",
     postContent: "",
+    blogImg: {},
   });
   const change = (e) => {
     console.log(e);
@@ -16,18 +18,20 @@ function AdminCreateBlogs() {
   const onSubmit = (e) => {
     e.preventDefault();
     console.log(blogdata);
-    
-    const {title, category, postContent} = blogdata;
-     // do front-end validation here. 
+
+    const { title, category, postContent } = blogdata;
+    // do front-end validation here.
     sendDataToServer();
   };
 
   const sendDataToServer = async () => {
     try {
-      const res = await axios.post(
-        "http://localhost:8000/blog/addblog",
-        blogdata
-      );
+      console.log("blog", blogdata);
+      const res = await axiosInstance.post("/blog/addblog", blogdata, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       console.log("resp", res);
       if (res.status === 201) {
         alert("Blog added successfully");
@@ -37,6 +41,12 @@ function AdminCreateBlogs() {
       alert(msg);
       console.log("err on add blog", error);
     }
+  };
+  const handleFileChanges = (e) => {
+    setblogdata({
+      ...blogdata,
+      blogImg: e.target.files[0],
+    });
   };
   return (
     <div className="Admin_createblog_main">
@@ -71,7 +81,7 @@ function AdminCreateBlogs() {
             <div className="admin_select_image">
               <label className="feature">Feature Image </label>
               <div className="admin_image_outline">
-                <button>Choose File</button>No File chosen
+                <input type="file" onChange={handleFileChanges} />
               </div>
               <button className="image_button" onClick={onSubmit}>
                 Save and post

@@ -6,6 +6,7 @@ import { toast } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { axiosInstance } from "../../api/axiosInstance";
 
 function UserLogin() {
   const navigate = useNavigate();
@@ -27,14 +28,17 @@ function UserLogin() {
 
   const sendDataToServer = async () => {
     try {
-      const res = await axios.post(
-        "http://localhost:8000/user/login",
+      const res = await axiosInstance.post(
+        "/user/login",
         logindata
       );
       console.log("resp", res);
       if (res.status === 200) {
+        const token=res.data.token;
+        localStorage.setItem("blog-management-token",token)
         toast.success("Login sucessfully");
         navigate("/Homepage1");
+        
       }
     } catch (error) {
       const msg = error?.response?.data?.message;

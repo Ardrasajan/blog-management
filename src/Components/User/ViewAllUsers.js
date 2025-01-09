@@ -1,18 +1,23 @@
 import React from "react";
 import "../../Assets/Style/ViewAllUsers.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaUsers } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import axios from "axios";
-import toast from "react-hot-toast";
+import { axiosInstance } from "../../api/axiosInstance";
+
 
 function ViewAllUsers() {
+const navigate=useNavigate();
     const [viewallusers,setviewallusers]=useState([])
-    const getDataFromServer=async()=>{
+    const getDataFromServer=async(token)=>{
         try{
           
           
-          const res=await axios.get("http://localhost:8000/user/findallusers");
+          const res=await axiosInstance.get("/user/findallusers", {
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
+          });
         
        console.log("resp",res);
        
@@ -28,7 +33,15 @@ function ViewAllUsers() {
         
       }
       useEffect(()=>{
-        getDataFromServer();
+const tokenId=localStorage.getItem("blog-management-token")
+if(tokenId){
+  getDataFromServer(tokenId);
+
+}
+else{
+  navigate("/user/login")
+}
+       
       },[])
       console.log(viewallusers);
       
@@ -38,9 +51,9 @@ function ViewAllUsers() {
       <div className="user_viewall_header">
         <nav class="navbar navbar-expand viewall_header_main">
           <div class="container-fluid">
-            <a class="navbar-brand ps-4 fs-4 fw-bold" href="#">
+            <Link class="navbar-brand ps-4 fs-4 fw-bold" to="/Homepage1">
               <span className="">Blog</span> Management
-            </a>
+            </Link>
             <button
               class="navbar-toggler"
               type="button"
@@ -55,57 +68,47 @@ function ViewAllUsers() {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item fw-bold">
-                  <a
+                  <Link
                     class="nav-link active ms-5"
                     aria-current="page"
-                    href="#"
+                    to="/Homepage1"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item ms-5 fw-bold">
-                  <a
+                  <Link
                     class="nav-link active"
                     aria-current="page"
-                    href="#"
+                    to="#"
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
 
                 <li class="nav-item ms-5 fw-bold">
-                  <a
+                  <Link
                     class="nav-link active"
                     aria-current="page"
-                    href="#"
+                    to="#"
                   >
                     Blog
-                  </a>
+                  </Link>
                 </li>
 
                 <li class="nav-item ms-5 fw-bold">
-                  <a
+                  <Link
                     class="nav-link active"
                     aria-current="page"
-                    href="#"
+                    to="/user/viewall"
                   >
                     Users
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <form class="d-flex input-form-search" role="search">
-            <input
-              class="form-control me-2 "
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+          
         </nav>
       </div>
       <div className="user_viewall_body">

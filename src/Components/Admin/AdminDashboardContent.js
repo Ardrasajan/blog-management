@@ -9,6 +9,7 @@ import AdminViewblogs from './AdminViewblogs'
 import AdminUsers from './AdminUsers'
 import AdminViewOneBlog from './AdminViewOneBlog'
 import AdminViewpostLit from './AdminViewOneBlog'
+import AdminUserProfile from './AdminUserProfile'
 
 function AdminDashboardContent({ data}) {
   return (
@@ -17,7 +18,7 @@ function AdminDashboardContent({ data}) {
 
       <div className='Admin_dashboard_content'>
         {
-          data == 'dashboard' ? <AdminDashboardMain /> : data == 'createblogs' ? <AdminCreateBlogs /> : data == 'category' ? <AdminCategory /> : data == 'viewblogs' ? <AdminViewblogs/> : data=='users'?<AdminUsers/>:data=='viewoneblog'?<AdminViewOneBlog/>:''
+          data == 'dashboard' ? <AdminDashboardMain /> : data == 'createblogs' ? <AdminCreateBlogs /> : data == 'category' ? <AdminCategory /> : data == 'viewblogs' ? <AdminViewblogs/> : data=='users'?<AdminUsers/>:data=='viewoneblog'?<AdminViewOneBlog/>:data=='userprofile'?<AdminUserProfile/>:''
 }
 
       </div>

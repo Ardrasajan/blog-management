@@ -1,21 +1,23 @@
 import "../../Assets/Style/ViewProfile.css"
 import React, { useState,useEffect } from 'react'
 import img from "../../Assets/Images/vecteezy_default-profile-picture-avatar-user-avatar-icon-person_21548095.jpg"
-import axios from "axios";
+
 import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import { axiosInstance } from "../../api/axiosInstance";
+import {BASE_URL} from "../../api/api"
 function ViewProfile() {
     const [viewuser,setviewuser]=useState([]);
     const {id}=useParams();
     console.log(id);
+    let userImg = `${BASE_URL}/${viewuser.userImg}`
     
     const getDataFromServer=async()=>{
         try{
           
           
-          const res=await axios.get(`http://localhost:8000/user/finduser/${id}`);
+          const res=await axiosInstance.get(`/user/finduser/${id}`);
         
        console.log("resp",res);
        
@@ -99,23 +101,13 @@ function ViewProfile() {
               </ul>
             </div>
           </div>
-          <form class="d-flex input-form-search" role="search">
-            <input
-              class="form-control me-2 "
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+          
         </nav>
       </div>
 
       <div class="viewprofile_card">
   <div class="viewprofile_left_container">
-    <img src={img} alt=""/>
+    <img src={userImg} alt=""/>
     <h2 class="viewprofile_gradienttext">{viewuser.userName}</h2>
     <p>User</p>
   </div>

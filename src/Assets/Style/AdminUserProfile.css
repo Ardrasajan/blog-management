@@ -1,0 +1,61 @@
+.Admin_user_profile_container{
+    height:100vh;
+    width:1160px;
+    margin: auto;
+    /* background-color:aqua; */
+    position: absolute;
+    
+}
+.Admin_user_profile_image_container{
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    margin-top: 30px;
+ 
+    /* background-color: aliceblue; */
+}
+.Admin_user_profile_image{
+    height: 250px;
+    width: 250px;
+    border-radius: 125px;
+    border: 3px solid chocolate;
+}
+.Admin_user_profile_info_container{
+    height: 350px;
+    width: 900px;
+    background-color: white;
+    border: 5px solid chocolate;
+   border-radius: 10px;
+   
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.Admin_user_profile_info_table1{
+    height: 350px;
+    width: 400px;
+    margin-left: 20px;
+    /* background-color: blueviolet; */
+    
+}
+.Admin_user_profile_info_table2{
+    height: 350px;
+    width: 400px;
+    /* background-color: blueviolet; */
+    margin-right: 20px;
+}
+.Admin_user_profile_table1{
+    height: 350px;
+    width: 400px;
+    border-collapse: collapse;
+    color: black;
+}
+.Admin_user_profile_table2{
+    height: 350px;
+    width: 400px;
+    border-collapse: collapse;
+    color: black;
+}

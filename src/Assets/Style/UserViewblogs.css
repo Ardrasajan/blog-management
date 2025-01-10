@@ -17,7 +17,7 @@ background-color:white;
     /* background-color: aqua; */
     display: flex;
 }
-.card_container{
+.user_viewallblogs_card_container{
     height:600px ;
    width: 1200px; 
    margin-top: 20px;
@@ -29,20 +29,20 @@ background-color:white;
    
 
 }
-.card_container .rows{
+.card_containeruser_viewallblogs_card_container .rows{
    display: flex;
    justify-content: space-between;
    margin-top: 17px;
    /* margin-bottom: 10px; */
    
 }
-.card_container .rows .col .cards {
+.user_viewallblogs_card_container .rows .col .cards {
    border-color: rgb(242, 29, 220);;
 }
-.card_container .rows .col .cards .buttons{
+.user_viewallblogs_card_container .rows .col .cards .buttons{
    /* background-color: chocolate; */
 }
-.card_container rows col cards buttons:hover{
+.user_viewallblogs_card_container rows col cards buttons:hover{
    cursor: pointer;
 }
 .cards img{
@@ -56,15 +56,15 @@ background-color:white;
     margin-top: 38px;
     /* background-color: rgb(24, 65, 101); */
 }
-.view_search{
+.user_viewall_search{
     margin-top: 100px;
     margin-left: 10px;
     gap: 5px;
 }
-.view_search h4{
+.user__viewall_search h4{
     margin-left: 15px;
 }
-.view_search #inputtext{
+.user_viewall_search #inputtext{
     background:none;
     border: 1px solid rgb(242, 29, 220);;
     border-radius: 4px;
@@ -73,7 +73,7 @@ background-color:white;
     border-right: transparent;
 
 }
-.view_search #find{
+.user_viewall_search #find{
     background-color: rgb(242, 29, 220);;
    
     border: 1px solid rgb(242, 29, 220);;
@@ -87,11 +87,11 @@ background-color:white;
     margin-top: 80px;
     
 }
-.categorylist{
+.user_categorylist{
     margin-top: 20px;
     background: none;
 }
-.categorylist .Linkview{
+.user_categorylist .Linkview{
     background:none;
     color: rgb(242, 29, 220);
     border: none;
@@ -99,7 +99,7 @@ background-color:white;
     border-bottom:1px solid whitesmoke;
     border: radius 0;
 }
-.categorylist .Linkview:hover{
+.user_categorylist .Linkview:hover{
 
     cursor: pointer;
     color:rgb(242, 29, 220);

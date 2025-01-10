@@ -111,7 +111,7 @@ function UserViewblogs() {
 
 
 <div className='user_viewallblogs_blogscontainer'>
-<div className="card_container">
+<div className="user_viewallblogs_card_container">
           <div className="container text-center">
             <div className="row rows gx-5">
               {allblogs.map((e, index) => {
@@ -145,7 +145,7 @@ function UserViewblogs() {
 
 
 <div className="user_view_search">
-          <div className="view_search">
+          <div className="user_viewall_search">
             <h4>Search Blog..</h4>
             <FaSearch className="icon" />
             <input
@@ -158,7 +158,7 @@ function UserViewblogs() {
 
             <div className="view_categories">
               <h4>Categories</h4>
-              <div class="list-group categorylist">
+              <div class="list-group user_categorylist">
                 <Link
                   to="#"
                   class="list-group-item list-group-item-action Linkview"

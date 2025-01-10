@@ -21,6 +21,7 @@ function Registation() {
     state: "",
     dateOfBirth: "",
     gender: "",
+    userImg:{},
   });
   const change = (e) => {
     console.log(e);
@@ -68,7 +69,12 @@ function Registation() {
     try {
       const res = await axiosInstance.post(
         "/user/adduser",
-        Signupdata
+        Signupdata,{
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      
       );
 
       console.log("resp", res);
@@ -88,6 +94,14 @@ function Registation() {
       alert(msg);
       console.log("err on add user", error);
     }
+
+
+  };
+  const handleFileChanges = (e) => {
+    setSignupdata({
+      ...Signupdata,
+      userImg: e.target.files[0],
+    });
   };
 
   return (
@@ -290,6 +304,9 @@ function Registation() {
 
 
               </div> */}
+               <div className="signup_image_outline">
+                <input type="file" onChange={handleFileChanges} />
+              </div>
 
               <button
                 className="blog-signUp-inputBox-btn my-3"

@@ -8,19 +8,25 @@ import { Link } from "react-router-dom";
 import { useEffect,useState } from "react";
 import {BASE_URL} from "../../api/api"
 import { axiosInstance } from "../../api/axiosInstance";
+import { useNavigate } from "react-router-dom";
 
 
 function AdminUserProfile() {
+  const navigate=useNavigate();
   const [adminuser,setadminuser]=useState([]);
     const {id}=useParams();
     console.log(id);
     let userImg = `${BASE_URL}/${adminuser.userImg}`
     
-    const getDataFromServer=async()=>{
+    const getDataFromServer=async(token)=>{
         try{
           
           
-          const res=await axiosInstance.get(`/user/finduser/${id}`);
+          const res=await axiosInstance.get(`/user/finduser/${id}`,{
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
+          });
         
        console.log("resp",res);
        
@@ -37,7 +43,14 @@ function AdminUserProfile() {
       }
       
   useEffect(() => {
-    getDataFromServer();
+    const tokenId=localStorage.getItem("blog-management-token")
+    if(tokenId){
+      getDataFromServer(tokenId);
+    
+    }
+    else{
+      navigate("/user/login")
+    }
   }, []);
   console.log(adminuser);
   return (

@@ -7,17 +7,23 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { axiosInstance } from "../../api/axiosInstance";
 import {BASE_URL} from "../../api/api"
+import { useNavigate } from "react-router-dom";
 function ViewProfile() {
+  const navigate=useNavigate();
     const [viewuser,setviewuser]=useState([]);
     const {id}=useParams();
     console.log(id);
     let userImg = `${BASE_URL}/${viewuser.userImg}`
     
-    const getDataFromServer=async()=>{
+    const getDataFromServer=async(token)=>{
         try{
           
           
-          const res=await axiosInstance.get(`/user/finduser/${id}`);
+          const res=await axiosInstance.get(`/user/finduser/${id}`,{
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
+          });
         
        console.log("resp",res);
        
@@ -34,7 +40,15 @@ function ViewProfile() {
       }
       
   useEffect(() => {
-    getDataFromServer();
+    const tokenId=localStorage.getItem("blog-management-token")
+    if(tokenId){
+      getDataFromServer(tokenId);
+    
+    }
+    else{
+      navigate("/user/login")
+    }
+           
   }, []);
   console.log(viewuser);
   

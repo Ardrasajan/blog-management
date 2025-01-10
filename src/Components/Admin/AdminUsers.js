@@ -5,7 +5,10 @@ import { FaUsers } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 import { axiosInstance } from "../../api/axiosInstance";
+import { BASE_URL } from "../../api/api";
+import { useNavigate } from "react-router-dom";
 function AdminUsers() {
+  const navigate=useNavigate();
   const [allusers, setallusers] = useState([]);
   const [fixedUsers, setfixedUsers] = useState([]);
 
@@ -22,9 +25,13 @@ function AdminUsers() {
     setallusers(newArr)
   };
 
-  const getDataFromServer = async () => {
+  const getDataFromServer = async (token) => {
     try {
-      const res = await axiosInstance.get("/user/findallusers");
+      const res = await axiosInstance.get("/user/findallusers",{
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
 
       console.log("resp", res);
 
@@ -41,7 +48,15 @@ function AdminUsers() {
   };
 
   useEffect(() => {
-    getDataFromServer();
+    const tokenId=localStorage.getItem("blog-management-token")
+    if(tokenId){
+      getDataFromServer(tokenId);
+    
+    }
+    else{
+      navigate("/user/login")
+    }
+         
   }, []);
   console.log(allusers);
 
